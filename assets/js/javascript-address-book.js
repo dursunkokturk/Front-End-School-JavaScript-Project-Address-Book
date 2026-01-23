@@ -68,6 +68,52 @@ let personAddresses = [];
 let personPhones = [];
 let personEMails = [];
 
+let continues = true;
+
+while (continues) {
+  let choise = prompt(`
+    Hangi işlemi yapmak istiyorsunuz?
+
+    1 - Kullanıcı Ara
+    2 - Kullanıcı Ekle
+    3 - Kullanıcı Sil
+    4 - Kullanıcı Güncelle
+    5 - Kullanıcıları Listele
+    0 - Çıkış
+
+  `);
+
+  switch (choise) {
+    case '1':
+      search();
+      break;
+
+    case '2':
+      personAdd();
+      break;
+
+    case '3':
+      userDelete();
+      break;
+
+    case '4':
+      userUpdate();
+      break;
+
+    case '5':
+      usersList();
+      break;
+
+    case '0':
+      console.log('Çıkış yapıldı');
+      continues = false;
+      break;
+
+    default:
+      console.log('Geçersiz seçim yaptınız.');
+  }
+}
+
 function personAdd(){
   let userFirstName = prompt("Kişinin Adını Giriniz");
   personFirstNames.push(userFirstName);
@@ -91,13 +137,13 @@ function personAdd(){
   personEMails.push(userEMail);
   userEMails.innerHTML += `<li>${personEMails}</li>`;
 
-  console.log(personFirstNames);
-  console.log(personLastNames);
-  console.log(personAddresses);
-  console.log(personPhones);
-  console.log(personEMails);
+  // console.log(personFirstNames);
+  // console.log(personLastNames);
+  // console.log(personAddresses);
+  // console.log(personPhones);
+  // console.log(personEMails);
 
-  console.log(userFirstNameAnduserLastName);
+  // console.log(userFirstNameAnduserLastName);
 }
 
 // personAdd();
