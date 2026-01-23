@@ -71,21 +71,21 @@ let personEMails = [];
 let continues = true;
 
 while (continues) {
-  let choise = prompt(`
-    Hangi işlemi yapmak istiyorsunuz?
+  // let choise = prompt(`
+  //   Hangi işlemi yapmak istiyorsunuz?
 
-    1 - Kullanıcı Ara
-    2 - Kullanıcı Ekle
-    3 - Kullanıcı Sil
-    4 - Kullanıcı Güncelle
-    5 - Kullanıcıları Listele
-    0 - Çıkış
+  //   1 - Kullanıcı Ara
+  //   2 - Kullanıcı Ekle
+  //   3 - Kullanıcı Sil
+  //   4 - Kullanıcı Güncelle
+  //   5 - Kullanıcıları Listele
+  //   0 - Çıkış
 
-  `);
+  // `);
 
   switch (choise) {
     case '1':
-      search();
+      personSearch();
       break;
 
     case '2':
@@ -114,21 +114,34 @@ while (continues) {
   }
 }
 
-function personAdd(){
+function personSearch() {
+  let userFirstNamed = prompt("Aranacak İsmi Giriniz");
+
+  userFirstNamed = userFirstNamed.toLowerCase();
+
+  for (let i = 0; i < personFirstNames.length; i++) {
+    if (personFirstNames[i].toLowerCase() === searchedName) {
+      alert(`Aradığınız Kişinin Bilgileri: ${personFirstNames[i]} ${personFirstNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}`);
+      return;
+    }
+  }
+}
+
+function personAdd() {
   let userFirstName = prompt("Kişinin Adını Giriniz");
   personFirstNames.push(userFirstName);
   // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
-  
+
   let userLastName = prompt("Kişinin Soyadını Giriniz");
   personLastNames.push(userLastName);
   // userLastNames.innerHTML += `<li>${personLastNames}</li>`;
 
   userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames} ${personLastNames}</li>`;
-  
+
   let userAddress = prompt("Kişinin Adresini Giriniz");
   personAddresses.push(userAddress);
   userAddresses.innerHTML += `<li>${personAddresses}</li>`;
-  
+
   let userPhone = Number(prompt("Kişinin Telefonunu Giriniz"));
   personPhones.push(userPhone);
   userPhones.innerHTML += `<li>${personPhones}</li>`;
