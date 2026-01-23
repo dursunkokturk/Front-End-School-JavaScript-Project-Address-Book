@@ -93,15 +93,15 @@ while (continues) {
       break;
 
     case '3':
-      userDelete();
+      personDelete();
       break;
 
     case '4':
-      userUpdate();
+      personUpdate();
       break;
 
     case '5':
-      usersList();
+      personList();
       break;
 
     case '0':
@@ -120,8 +120,8 @@ function personSearch() {
   userFirstNamed = userFirstNamed.toLowerCase();
 
   for (let i = 0; i < personFirstNames.length; i++) {
-    if (personFirstNames[i].toLowerCase() === searchedName) {
-      alert(`Aradığınız Kişinin Bilgileri: ${personFirstNames[i]} ${personFirstNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}`);
+    if (personFirstNames[i].toLowerCase() === userFirstNamed) {
+      userFirstNameAnduserLastName.innerHTML += `${personFirstNames[i]} ${personFirstNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}`;
       return;
     }
   }
@@ -149,14 +149,21 @@ function personAdd() {
   let userEMail = prompt("Kişinin E-Mail Adresini Giriniz");
   personEMails.push(userEMail);
   userEMails.innerHTML += `<li>${personEMails}</li>`;
-
-  // console.log(personFirstNames);
-  // console.log(personLastNames);
-  // console.log(personAddresses);
-  // console.log(personPhones);
-  // console.log(personEMails);
-
-  // console.log(userFirstNameAnduserLastName);
 }
 
-// personAdd();
+function personList() {
+  for (let i = 0; i < personFirstNames.length; i++) {
+    console.log(personFirstNames[i]);
+    console.log(personLastNames[i]);
+    console.log(personAddresses[i]);
+    console.log(personPhones[i]);
+    console.log(personEMails[i]);
+
+    userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
+    
+    // userFirstNameAnduserLastName += `<li>${personFirstNames} ${personLastNames}</li>`;
+    // userAddresses.innerHTML += `<li>${personAddresses}</li>`;
+    // userPhones.innerHTML += `<li>${personPhones}</li>`;
+    // userEMails.innerHTML += `<li>${personEMails}</li>`;
+  }
+}
