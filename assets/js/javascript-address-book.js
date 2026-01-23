@@ -71,11 +71,13 @@ let personEMails = [];
 function personAdd(){
   let userFirstName = prompt("Kişinin Adını Giriniz");
   personFirstNames.push(userFirstName);
-  userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
+  // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
   
   let userLastName = prompt("Kişinin Soyadını Giriniz");
   personLastNames.push(userLastName);
-  userLastNames.innerHTML += `<li>${personLastNames}</li>`;
+  // userLastNames.innerHTML += `<li>${personLastNames}</li>`;
+
+  userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames} ${personLastNames}</li>`;
   
   let userAddress = prompt("Kişinin Adresini Giriniz");
   personAddresses.push(userAddress);
@@ -94,6 +96,8 @@ function personAdd(){
   console.log(personAddresses);
   console.log(personPhones);
   console.log(personEMails);
+
+  console.log(userFirstNameAnduserLastName);
 }
 
 // personAdd();
