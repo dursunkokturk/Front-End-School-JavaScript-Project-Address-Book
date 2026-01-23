@@ -61,3 +61,39 @@ Hover efektleri
 
 Flex veya Grid kullanabilirsiniz.
 */
+
+let personFirstNames = [];
+let personLastNames = [];
+let personAddresses = [];
+let personPhones = [];
+let personEMails = [];
+
+function personAdd(){
+  let userFirstName = prompt("Kişinin Adını Giriniz");
+  personFirstNames.push(userFirstName);
+  userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
+  
+  let userLastName = prompt("Kişinin Soyadını Giriniz");
+  personLastNames.push(userLastName);
+  userLastNames.innerHTML += `<li>${personLastNames}</li>`;
+  
+  let userAddress = prompt("Kişinin Adresini Giriniz");
+  personAddresses.push(userAddress);
+  userAddresses.innerHTML += `<li>${personAddresses}</li>`;
+  
+  let userPhone = Number(prompt("Kişinin Telefonunu Giriniz"));
+  personPhones.push(userPhone);
+  userPhones.innerHTML += `<li>${personPhones}</li>`;
+
+  let userEMail = prompt("Kişinin E-Mail Adresini Giriniz");
+  personEMails.push(userEMail);
+  userEMails.innerHTML += `<li>${personEMails}</li>`;
+
+  console.log(personFirstNames);
+  console.log(personLastNames);
+  console.log(personAddresses);
+  console.log(personPhones);
+  console.log(personEMails);
+}
+
+// personAdd();
