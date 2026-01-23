@@ -71,17 +71,17 @@ let personEMails = [];
 let continues = true;
 
 while (continues) {
-  // let choise = prompt(`
-  //   Hangi işlemi yapmak istiyorsunuz?
+  let choise = prompt(`
+    Hangi işlemi yapmak istiyorsunuz?
 
-  //   1 - Kullanıcı Ara
-  //   2 - Kullanıcı Ekle
-  //   3 - Kullanıcı Sil
-  //   4 - Kullanıcı Güncelle
-  //   5 - Kullanıcıları Listele
-  //   0 - Çıkış
+    1 - Kullanıcı Ara
+    2 - Kullanıcı Ekle
+    3 - Kullanıcı Sil
+    4 - Kullanıcı Güncelle
+    5 - Kullanıcıları Listele
+    0 - Çıkış
 
-  // `);
+  `);
 
   switch (choise) {
     case '1':
