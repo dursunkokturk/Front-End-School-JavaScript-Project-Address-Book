@@ -74,11 +74,11 @@ while (continues) {
   let choise = prompt(`
     Hangi işlemi yapmak istiyorsunuz?
 
-    1 - Kullanıcı Ara
-    2 - Kullanıcı Ekle
-    3 - Kullanıcı Sil
-    4 - Kullanıcı Güncelle
-    5 - Kullanıcıları Listele
+    1 - Kişi Ara
+    2 - Kişi Ekle
+    3 - Kişi Sil
+    4 - Kişi Güncelle
+    5 - Kişileri Listele
     0 - Çıkış
 
   `);
@@ -125,6 +125,8 @@ function personSearch() {
       return;
     }
   }
+  alert(`${userFirstNamed} Bulunamadı`);
+  console.log(`${userFirstNamed} Bulunamadı`);
 }
 
 function personAdd() {
