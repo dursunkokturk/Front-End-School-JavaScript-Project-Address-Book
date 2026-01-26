@@ -131,25 +131,23 @@ function personSearch() {
 
 function personAdd() {
   let userFirstName = prompt("Kişinin Adını Giriniz");
-  personFirstNames.push(userFirstName);
-  // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
-
   let userLastName = prompt("Kişinin Soyadını Giriniz");
+  let userAddress = prompt("Kişinin Adresini Giriniz");
+  let userPhone = Number(prompt("Kişinin Telefonunu Giriniz"));
+  let userEMail = prompt("Kişinin E-Mail Adresini Giriniz");
+
+  personFirstNames.push(userFirstName);
   personLastNames.push(userLastName);
+  personAddresses.push(userAddress);
+  personPhones.push(userPhone);
+  personEMails.push(userEMail);
+
+  // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
   // userLastNames.innerHTML += `<li>${personLastNames}</li>`;
 
   userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames} ${personLastNames}</li>`;
-
-  let userAddress = prompt("Kişinin Adresini Giriniz");
-  personAddresses.push(userAddress);
   userAddresses.innerHTML += `<li>${personAddresses}</li>`;
-
-  let userPhone = Number(prompt("Kişinin Telefonunu Giriniz"));
-  personPhones.push(userPhone);
   userPhones.innerHTML += `<li>${personPhones}</li>`;
-
-  let userEMail = prompt("Kişinin E-Mail Adresini Giriniz");
-  personEMails.push(userEMail);
   userEMails.innerHTML += `<li>${personEMails}</li>`;
 }
 
