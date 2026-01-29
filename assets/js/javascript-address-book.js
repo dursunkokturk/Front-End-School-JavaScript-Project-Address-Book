@@ -121,7 +121,12 @@ function personSearch() {
 
   for (let i = 0; i < personFirstNames.length; i++) {
     if (personFirstNames[i].toLowerCase() === userFirstNamed) {
-      userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
+      console.log(`Aranan Kişinin Adı : ${personFirstNames[i]}`);
+      console.log(`Aranan Kişinin Soydı : ${personLastNames[i]}`);
+      console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
+      console.log(`Aranan Kişinin Telefonu : ${personPhones[i]}`);
+      console.log(`Aranan Kişinin E-Mail Adresi : ${personEMails[i]}`);
+      // userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
       return;
     }
   }
@@ -150,11 +155,11 @@ function personAdd() {
   userPhones.innerHTML += `<li>${personPhones[personPhones.length - 1]}</li>`;
   userEMails.innerHTML += `<li>${personEMails[personEMails.length - 1]}</li>`;
 
-  console.log(personFirstNames[personFirstNames.length - 1]);
-  console.log(personLastNames[personLastNames.length - 1]);
-  console.log(personAddresses[personAddresses.length - 1]);
-  console.log(personPhones[personPhones.length - 1]);
-  console.log(personEMails[personEMails.length - 1]);
+  console.log(`Eklenen Kişinin Adı : ${personFirstNames[personFirstNames.length - 1]}`);
+  console.log(`Eklenen Kişinin Soyadı : ${personLastNames[personLastNames.length - 1]}`);
+  console.log(`Eklenen Kişinin Adresi : ${personAddresses[personAddresses.length - 1]}`);
+  console.log(`Eklenen Kişinin Telefonu : ${personPhones[personPhones.length - 1]}`);
+  console.log(`Eklenen Kişinin E-Mail Adresi : ${personEMails[personEMails.length - 1]}`);
 }
 
 function personDelete() {
