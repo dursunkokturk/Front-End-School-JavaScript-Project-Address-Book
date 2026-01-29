@@ -168,11 +168,11 @@ function personDelete() {
 
 function personList() {
   for (let i = 0; i < personFirstNames.length; i++) {
-    console.log(personFirstNames[i]);
-    console.log(personLastNames[i]);
-    console.log(personAddresses[i]);
-    console.log(personPhones[i]);
-    console.log(personEMails[i]);
+    console.log(`Kişinin Adı : ${personFirstNames[i]}`);
+    console.log(`Kişinin Soyadı : ${personLastNames[i]}`);
+    console.log(`Kişinin Adresi : ${personAddresses[i]}`);
+    console.log(`Kişinin Telefonu : ${personPhones[i]}`);
+    console.log(`Kişinin E-Mail Adresi : ${personEMails[i]}`);
 
     userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
 
