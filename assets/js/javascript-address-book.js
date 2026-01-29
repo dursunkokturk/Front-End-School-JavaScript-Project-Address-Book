@@ -121,7 +121,7 @@ function personSearch() {
 
   for (let i = 0; i < personFirstNames.length; i++) {
     if (personFirstNames[i].toLowerCase() === userFirstNamed) {
-      userFirstNameAnduserLastName.innerHTML += `${personFirstNames[i]} ${personFirstNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}`;
+      userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
       return;
     }
   }
@@ -155,6 +155,10 @@ function personAdd() {
   console.log(personAddresses[personAddresses.length - 1]);
   console.log(personPhones[personPhones.length - 1]);
   console.log(personEMails[personEMails.length - 1]);
+}
+
+function personDelete() {
+  let userFirstName = prompt("Silinecek Kişinin Adını Giriniz");
 }
 
 function personList() {
