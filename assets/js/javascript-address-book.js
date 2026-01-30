@@ -166,6 +166,10 @@ function personDelete() {
   let userFirstName = prompt("Silinecek Kişinin Adını Giriniz");
 }
 
+function personUpdate() {
+  let userFirstName = prompt("Silinecek Kişinin Adını Giriniz");
+}
+
 function personList() {
   for (let i = 0; i < personFirstNames.length; i++) {
     console.log(`Kişinin Adı : ${personFirstNames[i]}`);
