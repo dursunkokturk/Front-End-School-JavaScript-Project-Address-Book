@@ -163,7 +163,25 @@ function personAdd() {
 }
 
 function personDelete() {
-  let userFirstName = prompt("Silinecek Kişinin Adını Giriniz");
+  let personDeleteFirstName = prompt("Silinecek Kişinin Adını Giriniz").toLowerCase();
+
+  for (let i = 0; i < personFirstNames.length; i++) {
+    if (personFirstNames[i].toLowerCase() === personDeleteFirstName) {
+      console.log(`Silinen Kişinin Bilgileri : ${personFirstNames[i]} ${personLastNames[i]} ${personAddresses[i]} ${personPhones[i]} ${personEMails[i]}`);
+
+      personFirstNames.splice(i, 1);
+      personLastNames.splice(i, 1);
+      personAddresses.splice(i, 1);
+      personPhones.splice(i, 1);
+      personEMails.splice(i, 1);
+
+      alert("Silme İşlemi Başarılı");
+
+      return;
+    } else {
+      console.log(`Silinen İsim : ${personDeleteFirstName}`);
+    }
+  }
 }
 
 function personUpdate() {
