@@ -115,12 +115,12 @@ while (continues) {
 }
 
 function personSearch() {
-  let userFirstNamed = prompt("Aranacak İsmi Giriniz");
+  let personSearched = prompt("Aranacak İsmi Giriniz");
 
   userFirstNamed = userFirstNamed.toLowerCase();
 
   for (let i = 0; i < personFirstNames.length; i++) {
-    if (personFirstNames[i].toLowerCase() === userFirstNamed) {
+    if (personFirstNames[i].toLowerCase() === personSearched) {
       console.log(`Aranan Kişinin Adı : ${personFirstNames[i]}`);
       console.log(`Aranan Kişinin Soydı : ${personLastNames[i]}`);
       console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
