@@ -185,7 +185,31 @@ function personDelete() {
 }
 
 function personUpdate() {
-  let userFirstName = prompt("Silinecek Kişinin Adını Giriniz");
+  let personUpdateFirstName = prompt("Güncellenecek Kişinin Adını Giriniz").toLowerCase();
+
+  for(let i=0; i<personFirstNames.length;i++){
+    if (personFirstNames[i].toLowerCase() === personUpdateFirstName) {
+      let newFirstName = prompt('Yeni İsmi Giriniz:');
+      let newLastName = prompt('Yeni Soyismi Giriniz:');
+      let newAddress = prompt('Yeni Adresi Giriniz:');
+      let newPhone = prompt('Yeni Telefonu Giriniz:');
+      let newEmail = prompt('Yeni E-Mail Adresini Giriniz:');
+
+
+      personFirstNames[i] = newFirstName;
+      personLastNames[i] = newLastName;
+      personAddresses[i] = newAddress;
+      personPhones[i] = newPhone;
+      personEMails[i] = newEmail;
+
+      // alert(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName}, Yaş: ${newAge}`);
+      console.log(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName} ${newAddress} ${newPhone} ${newEmail}`);
+      alert("Güncelle İşlemi Başarılı");
+      return;
+    }else{
+      alert("Güncelleme İşlemi Başarısız");
+    }
+  }
 }
 
 function personList() {
