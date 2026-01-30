@@ -115,24 +115,29 @@ while (continues) {
 }
 
 function personSearch() {
-  let personSearched = prompt("Aranacak İsmi Giriniz");
+  let personSearched = prompt("Aranacak İsmi Giriniz").toLowerCase();
 
-  userFirstNamed = userFirstNamed.toLowerCase();
-
-  for (let i = 0; i < personFirstNames.length; i++) {
-    if (personFirstNames[i].toLowerCase() === personSearched) {
-      console.log(`Aranan Kişinin Adı : ${personFirstNames[i]}`);
-      console.log(`Aranan Kişinin Soydı : ${personLastNames[i]}`);
-      console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
-      console.log(`Aranan Kişinin Telefonu : ${personPhones[i]}`);
-      console.log(`Aranan Kişinin E-Mail Adresi : ${personEMails[i]}`);
-      // userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
-      return;
+  if (personSearched === "") {
+    alert("İsim Alanı Boş Bırakılamaz");
+  } else if (personSearched.trim()) {
+    alert("Boşluk Bırakmadan İsim Giriniz");
+  } else {
+    for (let i = 0; i < personFirstNames.length; i++) {
+      if(personFirstNames[i].toLowerCase() === personSearched){
+        console.log(`Aranan Kişinin Adı : ${personFirstNames[i]}`);
+        console.log(`Aranan Kişinin Soydı : ${personLastNames[i]}`);
+        console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
+        console.log(`Aranan Kişinin Telefonu : ${personPhones[i]}`);
+        console.log(`Aranan Kişinin E-Mail Adresi : ${personEMails[i]}`);
+        // userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
+        return;
+      }
     }
+    alert(`${personSearched} Bulunamadı`);
+    console.log(`${personSearched} Bulunamadı`);
   }
-  alert(`${userFirstNamed} Bulunamadı`);
-  console.log(`${personSearched} Bulunamadı`);
 }
+
 
 function personAdd() {
   let personAddFirstName = prompt("Kişinin Adını Giriniz");
@@ -187,7 +192,7 @@ function personDelete() {
 function personUpdate() {
   let personUpdateFirstName = prompt("Güncellenecek Kişinin Adını Giriniz").toLowerCase();
 
-  for(let i=0; i<personFirstNames.length;i++){
+  for (let i = 0; i < personFirstNames.length; i++) {
     if (personFirstNames[i].toLowerCase() === personUpdateFirstName) {
       let newFirstName = prompt('Yeni İsmi Giriniz:');
       let newLastName = prompt('Yeni Soyismi Giriniz:');
@@ -206,7 +211,7 @@ function personUpdate() {
       console.log(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName} ${newAddress} ${newPhone} ${newEmail}`);
       alert("Güncelle İşlemi Başarılı");
       return;
-    }else{
+    } else {
       alert("Güncelleme İşlemi Başarısız");
     }
   }
