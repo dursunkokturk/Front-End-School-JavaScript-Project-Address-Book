@@ -135,17 +135,17 @@ function personSearch() {
 }
 
 function personAdd() {
-  let userFirstName = prompt("Kişinin Adını Giriniz");
-  let userLastName = prompt("Kişinin Soyadını Giriniz");
-  let userAddress = prompt("Kişinin Adresini Giriniz");
-  let userPhone = prompt("Kişinin Telefonunu Giriniz");
-  let userEMail = prompt("Kişinin E-Mail Adresini Giriniz");
+  let personAddFirstName = prompt("Kişinin Adını Giriniz");
+  let personAddLastName = prompt("Kişinin Soyadını Giriniz");
+  let personAddAddress = prompt("Kişinin Adresini Giriniz");
+  let personAddPhone = prompt("Kişinin Telefonunu Giriniz");
+  let personAddEMail = prompt("Kişinin E-Mail Adresini Giriniz");
 
-  personFirstNames.push(userFirstName);
-  personLastNames.push(userLastName);
-  personAddresses.push(userAddress);
-  personPhones.push(userPhone);
-  personEMails.push(userEMail);
+  personFirstNames.push(personAddFirstName);
+  personLastNames.push(personAddLastName);
+  personAddresses.push(personAddAddress);
+  personPhones.push(personAddPhone);
+  personEMails.push(personAddEMail);
 
   // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
   // userLastNames.innerHTML += `<li>${personLastNames}</li>`;
