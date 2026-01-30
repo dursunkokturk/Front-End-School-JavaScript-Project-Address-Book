@@ -115,12 +115,10 @@ while (continues) {
 }
 
 function personSearch() {
-  let personSearched = prompt("Aranacak İsmi Giriniz").toLowerCase();
+  let personSearched = prompt("Aranacak İsmi Giriniz").toLowerCase().trim();
 
   if (personSearched === "") {
     alert("İsim Alanı Boş Bırakılamaz");
-  } else if (personSearched.trim()) {
-    alert("Boşluk Bırakmadan İsim Giriniz");
   } else {
     for (let i = 0; i < personFirstNames.length; i++) {
       if(personFirstNames[i].toLowerCase() === personSearched){
@@ -129,7 +127,7 @@ function personSearch() {
         console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
         console.log(`Aranan Kişinin Telefonu : ${personPhones[i]}`);
         console.log(`Aranan Kişinin E-Mail Adresi : ${personEMails[i]}`);
-        // userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
+        userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
         return;
       }
     }
