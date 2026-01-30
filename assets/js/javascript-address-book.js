@@ -131,7 +131,7 @@ function personSearch() {
     }
   }
   alert(`${userFirstNamed} Bulunamadı`);
-  console.log(`${userFirstNamed} Bulunamadı`);
+  console.log(`${personSearched} Bulunamadı`);
 }
 
 function personAdd() {
