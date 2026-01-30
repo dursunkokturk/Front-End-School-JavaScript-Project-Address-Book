@@ -127,7 +127,10 @@ function personSearch() {
         console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
         console.log(`Aranan Kişinin Telefonu : ${personPhones[i]}`);
         console.log(`Aranan Kişinin E-Mail Adresi : ${personEMails[i]}`);
-        userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}, Adres: ${personAddresses[i]}, Telefon: ${personPhones[i]}, E-Mail: ${personEMails[i]}</li>`;
+        userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
+        userAddresses.innerHTML += `<li>${personAddresses[i]}</li>`;
+        userPhones.innerHTML += `<li>${personPhones[i]}</li>`;
+        userEMails.innerHTML += `<li>${personEMails[i]}</li>`;
         return;
       }
     }
