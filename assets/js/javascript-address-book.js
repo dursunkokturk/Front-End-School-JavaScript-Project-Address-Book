@@ -122,10 +122,13 @@ function personSearch() {
   } else {
     for (let i = 0; i < personFirstNames.length; i++) {
       if (personFirstNames[i].toLowerCase() === personSearched) {
-        searchResultFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
-        searchResultAddresses.innerHTML += `<li>${personAddresses[i]}</li>`;
-        searchResultPhones.innerHTML += `<li>${personPhones[i]}</li>`;
-        searchResultEMails.innerHTML += `<li>${personEMails[i]}</li>`;
+        searchResultFirstNameAnduserLastName.innerHTML += `
+        <tr>
+          <td>${personFirstNames[i]} ${personLastNames[i]}</td>
+          <td>${personAddresses[i]}</td>
+          <td>${personPhones[i]}</td>
+          <td>${personEMails[i]}</td>
+        </tr>`;
         return;
       }
     }

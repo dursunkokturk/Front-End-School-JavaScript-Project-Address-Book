@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  background-color: lightblue;
+}
+
+.modern-table {
+  width: 50%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* satırlar arası boşluk */
+  font-family: system-ui, sans-serif;
+}
+
+.modern-table thead th {
+  text-align: left;
+  padding: 12px;
+  background-color: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+}
+
+.modern-table tbody tr {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.modern-table tbody td {
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Sol ve sağ köşeleri yuvarlama */
+.modern-table tbody tr td:first-child {
+  border-left: 1px solid #e5e7eb;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.modern-table tbody tr td:last-child {
+  border-right: 1px solid #e5e7eb;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
