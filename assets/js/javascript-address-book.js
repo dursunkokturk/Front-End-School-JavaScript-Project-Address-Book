@@ -156,10 +156,10 @@ function personAdd() {
   // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
   // userLastNames.innerHTML += `<li>${personLastNames}</li>`;
 
-  userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[personFirstNames.length - 1]} ${personLastNames[personLastNames.length - 1]}</li>`;
-  userAddresses.innerHTML += `<li>${personAddresses[personAddresses.length - 1]}</li>`;
-  userPhones.innerHTML += `<li>${personPhones[personPhones.length - 1]}</li>`;
-  userEMails.innerHTML += `<li>${personEMails[personEMails.length - 1]}</li>`;
+  addResultFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[personFirstNames.length - 1]} ${personLastNames[personLastNames.length - 1]}</li>`;
+  addResultAddresses.innerHTML += `<li>${personAddresses[personAddresses.length - 1]}</li>`;
+  addResultPhones.innerHTML += `<li>${personPhones[personPhones.length - 1]}</li>`;
+  addResultEMails.innerHTML += `<li>${personEMails[personEMails.length - 1]}</li>`;
 
   console.log(`Eklenen Kişinin Adı : ${personFirstNames[personFirstNames.length - 1]}`);
   console.log(`Eklenen Kişinin Soyadı : ${personLastNames[personLastNames.length - 1]}`);
