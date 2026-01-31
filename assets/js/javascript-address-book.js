@@ -151,10 +151,13 @@ function personAdd() {
   personPhones.push(personAddPhone);
   personEMails.push(personAddEMail);
 
-  addResultFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[personFirstNames.length - 1]} ${personLastNames[personLastNames.length - 1]}</li>`;
-  addResultAddresses.innerHTML += `<li>${personAddresses[personAddresses.length - 1]}</li>`;
-  addResultPhones.innerHTML += `<li>${personPhones[personPhones.length - 1]}</li>`;
-  addResultEMails.innerHTML += `<li>${personEMails[personEMails.length - 1]}</li>`;
+  addResultFirstNameAnduserLastName.innerHTML += `
+  <tr>
+    <td>${personFirstNames[personFirstNames.length - 1]} ${personLastNames[personLastNames.length - 1]}</td>
+    <td>${personAddresses[personAddresses.length - 1]}</td>
+    <td>${personPhones[personPhones.length - 1]}</td>
+    <td>${personEMails[personEMails.length - 1]}</td>
+  <tr>`;
 
   personList();
 }
@@ -207,7 +210,7 @@ function personUpdate() {
       updateResultAddresses.innerHTML += `<li>${newAddress}</li>`;
       updateResultPhones.innerHTML += `<li>${newPhone}</li>`;
       updateResultEMails.innerHTML += `<li>${newEmail}</li>`;
-      
+
       alert("Güncelle İşlemi Başarılı");
 
       return;
