@@ -209,10 +209,13 @@ function personUpdate() {
       personPhones[i] = newPhone;
       personEMails[i] = newEmail;
 
-      updateResultFirstNameAnduserLastName.innerHTML += `<li>${newFirstName} ${newLastName}</li>`;
-      updateResultAddresses.innerHTML += `<li>${newAddress}</li>`;
-      updateResultPhones.innerHTML += `<li>${newPhone}</li>`;
-      updateResultEMails.innerHTML += `<li>${newEmail}</li>`;
+      updateResultFirstNameAnduserLastName.innerHTML += `
+        <tr>
+          <td>${newFirstName} ${newLastName}</td>
+          <td>${newAddress}</td>
+          <td>${newPhone}</td>
+          <td>${newEmail}</td>
+        </tr>`;
 
       alert("Güncelle İşlemi Başarılı");
 
