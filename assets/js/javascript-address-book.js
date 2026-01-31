@@ -121,7 +121,7 @@ function personSearch() {
     alert("İsim Alanı Boş Bırakılamaz");
   } else {
     for (let i = 0; i < personFirstNames.length; i++) {
-      if(personFirstNames[i].toLowerCase() === personSearched){
+      if (personFirstNames[i].toLowerCase() === personSearched) {
         console.log(`Aranan Kişinin Adı : ${personFirstNames[i]}`);
         console.log(`Aranan Kişinin Soydı : ${personLastNames[i]}`);
         console.log(`Aranan Kişinin Adresi : ${personAddresses[i]}`);
@@ -153,13 +153,12 @@ function personAdd() {
   personPhones.push(personAddPhone);
   personEMails.push(personAddEMail);
 
-  // userFirstNames.innerHTML += `<li>${personFirstNames}</li>`;
-  // userLastNames.innerHTML += `<li>${personLastNames}</li>`;
-
   addResultFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[personFirstNames.length - 1]} ${personLastNames[personLastNames.length - 1]}</li>`;
   addResultAddresses.innerHTML += `<li>${personAddresses[personAddresses.length - 1]}</li>`;
   addResultPhones.innerHTML += `<li>${personPhones[personPhones.length - 1]}</li>`;
   addResultEMails.innerHTML += `<li>${personEMails[personEMails.length - 1]}</li>`;
+
+  personList();
 
   console.log(`Eklenen Kişinin Adı : ${personFirstNames[personFirstNames.length - 1]}`);
   console.log(`Eklenen Kişinin Soyadı : ${personLastNames[personLastNames.length - 1]}`);
@@ -183,6 +182,8 @@ function personDelete() {
 
       alert("Silme İşlemi Başarılı");
 
+      personList();
+
       return;
     } else {
       console.log(`Silinen İsim : ${personDeleteFirstName}`);
@@ -201,7 +202,6 @@ function personUpdate() {
       let newPhone = prompt('Yeni Telefonu Giriniz:');
       let newEmail = prompt('Yeni E-Mail Adresini Giriniz:');
 
-
       personFirstNames[i] = newFirstName;
       personLastNames[i] = newLastName;
       personAddresses[i] = newAddress;
@@ -211,6 +211,9 @@ function personUpdate() {
       // alert(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName}, Yaş: ${newAge}`);
       console.log(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName} ${newAddress} ${newPhone} ${newEmail}`);
       alert("Güncelle İşlemi Başarılı");
+
+      personList();
+
       return;
     } else {
       alert("Güncelleme İşlemi Başarısız");
@@ -219,18 +222,15 @@ function personUpdate() {
 }
 
 function personList() {
+  listResultFirstNameAnduserLastName.innerHTML = "";
+  listResultAddresses.innerHTML = "";
+  listResultPhones.innerHTML = "";
+  listResultEMails.innerHTML = "";
+
   for (let i = 0; i < personFirstNames.length; i++) {
-    console.log(`Kişinin Adı : ${personFirstNames[i]}`);
-    console.log(`Kişinin Soyadı : ${personLastNames[i]}`);
-    console.log(`Kişinin Adresi : ${personAddresses[i]}`);
-    console.log(`Kişinin Telefonu : ${personPhones[i]}`);
-    console.log(`Kişinin E-Mail Adresi : ${personEMails[i]}`);
-
-    userFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
-
-    // userFirstNameAnduserLastName += `<li>${personFirstNames} ${personLastNames}</li>`;
-    // userAddresses.innerHTML += `<li>${personAddresses}</li>`;
-    // userPhones.innerHTML += `<li>${personPhones}</li>`;
-    // userEMails.innerHTML += `<li>${personEMails}</li>`;
+    listResultFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
+    listResultAddresses.innerHTML += `<li>${personAddresses[i]}</li>`;
+    listResultPhones.innerHTML += `<li>${personPhones[i]}</li>`;
+    listResultEMails.innerHTML += `<li>${personEMails[i]}</li>`;
   }
 }
