@@ -202,7 +202,7 @@ function personUpdate() {
 
       updateResultFirstNameAnduserLastName.innerHTML += `<li>${newFirstName} ${newLastName}</li>`;
       updateResultAddresses.innerHTML += `<li>${newAddress}</li>`;
-      deleteResultPhones.innerHTML += `<li>${newPhone}</li>`;
+      updateResultPhones.innerHTML += `<li>${newPhone}</li>`;
       updateResultEMails.innerHTML += `<li>${newEmail}</li>`;
       
       alert("Güncelle İşlemi Başarılı");
