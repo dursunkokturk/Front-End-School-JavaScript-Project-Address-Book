@@ -200,11 +200,12 @@ function personUpdate() {
       personPhones[i] = newPhone;
       personEMails[i] = newEmail;
 
-      // alert(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName}, Yaş: ${newAge}`);
-      console.log(`Güncellenen Kişinin Bilgileri: ${newFirstName} ${newLastName} ${newAddress} ${newPhone} ${newEmail}`);
+      updateResultFirstNameAnduserLastName.innerHTML += `<li>${newFirstName} ${newLastName}</li>`;
+      updateResultAddresses.innerHTML += `<li>${newAddress}</li>`;
+      deleteResultPhones.innerHTML += `<li>${newPhone}</li>`;
+      updateResultEMails.innerHTML += `<li>${newEmail}</li>`;
+      
       alert("Güncelle İşlemi Başarılı");
-
-      personList();
 
       return;
     } else {
