@@ -158,8 +158,6 @@ function personAdd() {
     <td>${personPhones[personPhones.length - 1]}</td>
     <td>${personEMails[personEMails.length - 1]}</td>
   <tr>`;
-
-  personList();
 }
 
 function personDelete() {
@@ -182,8 +180,6 @@ function personDelete() {
       personEMails.splice(i, 1);
 
       alert("Silme İşlemi Başarılı");
-
-      personList();
 
       return;
     } else {
@@ -210,12 +206,12 @@ function personUpdate() {
       personEMails[i] = newEmail;
 
       updateResultFirstNameAnduserLastName.innerHTML += `
-        <tr>
-          <td>${newFirstName} ${newLastName}</td>
-          <td>${newAddress}</td>
-          <td>${newPhone}</td>
-          <td>${newEmail}</td>
-        </tr>`;
+      <td>
+        <td>${newFirstName} ${newLastName}</td>
+        <td>${newAddress}</td>
+        <td>${newPhone}</td>
+        <li>${newEmail}</li>
+      </td>`;
 
       alert("Güncelle İşlemi Başarılı");
 
@@ -233,9 +229,12 @@ function personList() {
   listResultEMails.innerHTML = "";
 
   for (let i = 0; i < personFirstNames.length; i++) {
-    listResultFirstNameAnduserLastName.innerHTML += `<li>${personFirstNames[i]} ${personLastNames[i]}</li>`;
-    listResultAddresses.innerHTML += `<li>${personAddresses[i]}</li>`;
-    listResultPhones.innerHTML += `<li>${personPhones[i]}</li>`;
-    listResultEMails.innerHTML += `<li>${personEMails[i]}</li>`;
+    listResultFirstNameAnduserLastName.innerHTML += `
+    <tr>
+      <td>${personFirstNames[i]} ${personLastNames[i]}</td>
+      <td>${personAddresses[i]}</td>
+      <td>${personPhones[i]}</td>
+      <td>${personEMails[i]}</td>
+    </tr>`;
   }
 }
