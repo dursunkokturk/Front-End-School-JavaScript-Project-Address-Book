@@ -224,9 +224,6 @@ function personUpdate() {
 
 function personList() {
   listResultFirstNameAnduserLastName.innerHTML = "";
-  listResultAddresses.innerHTML = "";
-  listResultPhones.innerHTML = "";
-  listResultEMails.innerHTML = "";
 
   for (let i = 0; i < personFirstNames.length; i++) {
     listResultFirstNameAnduserLastName.innerHTML += `
